@@ -1,7 +1,5 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
+RUN rm -rf /usr/src/currency
+WORKDIR /usr/src/currency
 EXPOSE 8083
-RUN mkdir -p /app/
-RUN mkdir -p /app/logs/
-ADD target/exchange-service.jar /app/book-service.jar
-ENTRYPOINT java -jar /app/book-service.jar
+ENTRYPOINT java -jar /usr/src/currency/CurrencyExchange-0.0.1-SNAPSHOT.jar
