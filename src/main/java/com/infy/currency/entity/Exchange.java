@@ -25,8 +25,6 @@ public class Exchange {
 	@Column(name = "currency_conversion")
 	private double conversion;
 
-	@Transient
-	private int port;
 
 	public Exchange() {
 
@@ -60,14 +58,6 @@ public class Exchange {
 
 	public void setConversion(double conversion) {
 		this.conversion = conversion;
-	}
-
-	public int getPort() {
-		return port;
-	}
-
-	public void setPort(int port) {
-		this.port = port;
 	}
 
 }
